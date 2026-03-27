@@ -68,6 +68,21 @@ const style = document.createElement('style');
 style.textContent = '.revealed { opacity: 1 !important; transform: translateY(0) !important; }';
 document.head.appendChild(style);
 
+// ----- Form submit -----
+function handleForm(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-btn');
+  btn.textContent = '✓ Mensagem enviada!';
+  btn.style.background = '#3d8a7e';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = 'Enviar mensagem →';
+    btn.style.background = '';
+    btn.disabled = false;
+    e.target.reset();
+  }, 3000);
+}
+
 // ----- Smooth scroll -----
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
