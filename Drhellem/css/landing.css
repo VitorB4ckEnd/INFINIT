@@ -118,29 +118,11 @@ nav a:hover::after { width: 100%; }
 .hero {
   min-height: 100vh;
   padding: 100px 50px 80px;
-  background: var(--baby-blue);
+  background: url('../imagens/nuvens.png') repeat center center;
+  background-size: 380px;
   position: relative;
   overflow: hidden;
   display: flex; align-items: center;
-}
-
-/* Nuvens no hero */
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(ellipse 120px 70px at 5% 12%, rgba(255,255,255,0.9) 60%, transparent 100%),
-    radial-gradient(ellipse 80px 50px at 1% 20%, rgba(255,255,255,0.9) 60%, transparent 100%),
-    radial-gradient(ellipse 80px 50px at 12% 18%, rgba(255,255,255,0.9) 60%, transparent 100%),
-    radial-gradient(ellipse 130px 75px at 90% 8%, rgba(255,255,255,0.9) 60%, transparent 100%),
-    radial-gradient(ellipse 85px 52px at 84% 16%, rgba(255,255,255,0.9) 60%, transparent 100%),
-    radial-gradient(ellipse 85px 52px at 97% 15%, rgba(255,255,255,0.9) 60%, transparent 100%),
-    radial-gradient(ellipse 100px 60px at 48% 4%, rgba(255,255,255,0.85) 60%, transparent 100%),
-    radial-gradient(ellipse 70px 45px at 42% 10%, rgba(255,255,255,0.85) 60%, transparent 100%),
-    radial-gradient(ellipse 70px 45px at 56% 9%, rgba(255,255,255,0.85) 60%, transparent 100%);
-  z-index: 0;
 }
 
 .hero-shapes { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
@@ -151,31 +133,18 @@ nav a:hover::after { width: 100%; }
 }
 .shape-1 {
   width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(90,173,160,0.10) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(90,173,160,0.12) 0%, transparent 70%);
   top: -100px; right: -100px; animation-delay: 0s;
 }
 .shape-2 {
   width: 350px; height: 350px;
-  background: radial-gradient(circle, rgba(201,184,216,0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(201,184,216,0.15) 0%, transparent 70%);
   bottom: -50px; left: -80px; animation-delay: -3s;
 }
 .shape-3 {
   width: 250px; height: 250px;
-  background: radial-gradient(circle, rgba(245,168,130,0.10) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(245,168,130,0.12) 0%, transparent 70%);
   top: 50%; left: 45%; animation-delay: -6s;
-}
-
-/* Estrelinhas no hero */
-.hero-shapes::after {
-  content: '⭐ ✨ ⭐ ✨ ⭐ ✨ ⭐';
-  position: absolute;
-  top: 30px; left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.9rem;
-  letter-spacing: 38px;
-  opacity: 0.45;
-  pointer-events: none;
-  white-space: nowrap;
 }
 
 @keyframes float {
@@ -192,7 +161,7 @@ nav a:hover::after { width: 100%; }
 
 .hero-badge {
   display: inline-block;
-  background: rgba(255,255,255,0.85); color: var(--teal-deep);
+  background: var(--teal-pale); color: var(--teal-deep);
   font-size: 0.75rem; font-weight: 500;
   padding: 8px 18px; border-radius: 20px;
   margin-bottom: 22px;
@@ -226,20 +195,19 @@ nav a:hover::after { width: 100%; }
 .btn-primary.large { padding: 16px 38px; font-size: 0.88rem; }
 
 .btn-ghost {
-  background: rgba(255,255,255,0.7); color: var(--dark);
+  background: transparent; color: var(--dark);
   padding: 14px 28px; border-radius: 30px;
   font-size: 0.82rem; font-weight: 500;
   text-decoration: none; border: 1.5px solid rgba(45,58,53,0.18);
   transition: all 0.3s;
 }
-.btn-ghost:hover { border-color: var(--teal); color: var(--teal); background: white; }
+.btn-ghost:hover { border-color: var(--teal); color: var(--teal); background: var(--teal-pale); }
 
 .hero-stats {
   display: flex; align-items: center;
-  background: rgba(255,255,255,0.85); border-radius: 16px; padding: 18px 24px;
+  background: white; border-radius: 16px; padding: 18px 24px;
   box-shadow: 0 4px 20px rgba(45,58,53,0.07);
   width: fit-content;
-  backdrop-filter: blur(8px);
 }
 .hstat { text-align: center; padding: 0 20px; }
 .hstat strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--teal); line-height: 1; }
@@ -323,48 +291,9 @@ nav a:hover::after { width: 100%; }
    ========================================= */
 .materiais {
   padding: 100px 0;
-  background: var(--baby-blue);
-  position: relative;
-  overflow: hidden;
+  background: url('../imagens/nuvens.png') repeat center center;
+  background-size: 380px;
 }
-
-/* Nuvens na seção de materiais */
-.materiais::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(ellipse 120px 70px at 8% 8%, rgba(255,255,255,0.88) 60%, transparent 100%),
-    radial-gradient(ellipse 80px 50px at 3% 16%, rgba(255,255,255,0.88) 60%, transparent 100%),
-    radial-gradient(ellipse 80px 50px at 15% 14%, rgba(255,255,255,0.88) 60%, transparent 100%),
-    radial-gradient(ellipse 130px 75px at 88% 6%, rgba(255,255,255,0.88) 60%, transparent 100%),
-    radial-gradient(ellipse 85px 52px at 82% 14%, rgba(255,255,255,0.88) 60%, transparent 100%),
-    radial-gradient(ellipse 85px 52px at 96% 13%, rgba(255,255,255,0.88) 60%, transparent 100%),
-    radial-gradient(ellipse 110px 65px at 28% 88%, rgba(255,255,255,0.80) 60%, transparent 100%),
-    radial-gradient(ellipse 75px 48px at 22% 95%, rgba(255,255,255,0.80) 60%, transparent 100%),
-    radial-gradient(ellipse 75px 48px at 36% 93%, rgba(255,255,255,0.80) 60%, transparent 100%),
-    radial-gradient(ellipse 110px 65px at 72% 90%, rgba(255,255,255,0.80) 60%, transparent 100%),
-    radial-gradient(ellipse 75px 48px at 66% 96%, rgba(255,255,255,0.80) 60%, transparent 100%),
-    radial-gradient(ellipse 75px 48px at 80% 94%, rgba(255,255,255,0.80) 60%, transparent 100%);
-  z-index: 0;
-}
-
-/* Estrelinhas na seção de materiais */
-.materiais::after {
-  content: '✨ ⭐ ✨ ⭐ ✨ ⭐ ✨';
-  position: absolute;
-  top: 24px; left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.85rem;
-  letter-spacing: 36px;
-  opacity: 0.4;
-  pointer-events: none;
-  white-space: nowrap;
-  z-index: 0;
-}
-
-.materiais .container { position: relative; z-index: 1; }
 
 .mat-category { margin-bottom: 60px; }
 
@@ -529,27 +458,9 @@ nav a:hover::after { width: 100%; }
    ========================================= */
 .contato {
   padding: 100px 0;
-  background: var(--baby-blue);
-  position: relative;
-  overflow: hidden;
+  background: url('../imagens/nuvens.png') repeat center center;
+  background-size: 380px;
 }
-
-.contato::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(ellipse 110px 65px at 5% 10%, rgba(255,255,255,0.85) 60%, transparent 100%),
-    radial-gradient(ellipse 75px 48px at 0% 18%, rgba(255,255,255,0.85) 60%, transparent 100%),
-    radial-gradient(ellipse 75px 48px at 13% 16%, rgba(255,255,255,0.85) 60%, transparent 100%),
-    radial-gradient(ellipse 110px 65px at 88% 8%, rgba(255,255,255,0.85) 60%, transparent 100%),
-    radial-gradient(ellipse 75px 48px at 82% 16%, rgba(255,255,255,0.85) 60%, transparent 100%),
-    radial-gradient(ellipse 75px 48px at 96% 14%, rgba(255,255,255,0.85) 60%, transparent 100%);
-  z-index: 0;
-}
-
-.contato .container { position: relative; z-index: 1; }
 
 .contato-grid {
   display: grid;
