@@ -118,7 +118,7 @@ nav a:hover::after { width: 100%; }
 .hero {
   min-height: 100vh;
   padding: 100px 50px 80px;
-  background: url('../imagens/nuvens.png') repeat center center;
+  background: url('../imagens/fundo02.png') repeat center center;
   background-size: 380px;
   position: relative;
   overflow: hidden;
@@ -270,7 +270,7 @@ nav a:hover::after { width: 100%; }
 .section-head.center { text-align: center; }
 
 .tag-label {
-  display: inline-block; color: var(--teal); font-size: 0.7rem;
+  display: inline-block; color: var(--light-text); font-size: 0.7rem;
   letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px;
 }
 
@@ -291,7 +291,7 @@ nav a:hover::after { width: 100%; }
    ========================================= */
 .materiais {
   padding: 100px 0;
-  background: url('../imagens/nuvens.png') repeat center center;
+  background: url('../imagens/fundo02.png') repeat center center;
   background-size: 380px;
 }
 
@@ -458,7 +458,7 @@ nav a:hover::after { width: 100%; }
    ========================================= */
 .contato {
   padding: 100px 0;
-  background: url('../imagens/nuvens.png') repeat center center;
+  background: url('../imagens/fundo02.png') repeat center center;
   background-size: 380px;
 }
 
