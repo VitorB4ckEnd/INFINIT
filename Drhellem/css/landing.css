@@ -124,6 +124,13 @@ nav a:hover::after { width: 100%; }
   overflow: hidden;
   display: flex; align-items: center;
 }
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.80);
+  z-index: 1;
+}
 
 .hero-shapes { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
 
@@ -293,6 +300,18 @@ nav a:hover::after { width: 100%; }
   padding: 100px 0;
   background: url('../imagens/fundo02.png') repeat center center;
   background-size: 380px;
+  position: relative;
+}
+.materiais::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.82);
+  z-index: 0;
+}
+.materiais .container {
+  position: relative;
+  z-index: 1;
 }
 
 .mat-category { margin-bottom: 60px; }
@@ -460,6 +479,18 @@ nav a:hover::after { width: 100%; }
   padding: 100px 0;
   background: url('../imagens/fundo02.png') repeat center center;
   background-size: 380px;
+  position: relative;
+}
+.contato::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.82);
+  z-index: 0;
+}
+.contato .container {
+  position: relative;
+  z-index: 1;
 }
 
 .contato-grid {
