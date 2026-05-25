@@ -23,13 +23,22 @@
   --baby-blue:  #d6eeff;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 body {
   font-family: 'DM Sans', sans-serif;
   color: var(--text);
   background: var(--white);
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
 }
+
+img { max-width: 100%; height: auto; }
 
 .container { max-width: 1140px; margin: 0 auto; padding: 0 40px; }
 
@@ -634,25 +643,157 @@ footer { background: #1a2420; padding: 50px 0 30px; }
 /* =========================================
    RESPONSIVE
    ========================================= */
+
+/* ---------- 1024px ---------- */
 @media (max-width: 1024px) {
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-visual { display: none; }
+  .container { padding: 0 28px; }
+  header { padding: 0 24px; gap: 16px; }
+  .header-cta { padding: 8px 16px; font-size: 0.7rem; }
+  .hero { padding: 90px 28px 70px; }
+  .hero-inner { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .hero-img-wrap { max-width: 360px; }
   .ben-grid { grid-template-columns: repeat(2, 1fr); }
   .sobre-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
   .contato-grid { grid-template-columns: 1fr; gap: 40px; }
 }
 
+/* ---------- 768px ---------- */
 @media (max-width: 768px) {
   .container { padding: 0 20px; }
-  header { padding: 0 20px; }
+
+  /* Header */
+  header { padding: 0 16px; gap: 10px; height: 60px; }
   nav { display: none; }
-  .hero { padding: 90px 20px 60px; }
-  .materiais, .beneficios, .sobre, .contato, .cta-section { padding: 70px 0; }
+  .logo-mark { width: 34px; height: 34px; font-size: 1.1rem; border-radius: 10px; }
+  .logo-name { font-size: 0.9rem; }
+  .logo-role { font-size: 0.55rem; }
+  .header-cta { padding: 8px 14px; font-size: 0.68rem; }
+
+  /* Hero */
+  .hero { padding: 80px 20px 50px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 30px; }
+  .hero-text { text-align: center; }
+  .hero-text h1 { font-size: 1.9rem; }
+  .hero-text p { margin-left: auto; margin-right: auto; max-width: 100%; }
+  .hero-btns { justify-content: center; }
+  .hero-badge { font-size: 0.7rem; }
+
+  /* Hero stats */
+  .hero-stats {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 12px;
+  }
+  .hstat { padding: 0 12px; }
+  .hstat strong { font-size: 1.6rem; }
+  .hstat span { font-size: 0.62rem; }
+
+  /* Hero visual */
+  .hero-visual { display: none; }
+
+  /* Sections */
+  .materiais, .beneficios, .sobre, .contato, .cta-section { padding: 60px 0; }
+  .section-head { margin-bottom: 32px; }
+  .section-title { font-size: 1.6rem; }
+
+  /* Grids */
   .mat-grid { grid-template-columns: 1fr; }
   .ben-grid { grid-template-columns: 1fr; }
   .sobre-grid { grid-template-columns: 1fr; }
   .sobre-img-wrap { display: none; }
-  .contato-grid { grid-template-columns: 1fr; gap: 32px; }
-  .form-row { grid-template-columns: 1fr; }
-  .contato-form-wrap { padding: 24px; }
+  .contato-grid { grid-template-columns: 1fr; gap: 24px; }
+
+  /* Cards */
+  .mat-card { width: 100%; }
+  .mat-info { padding: 18px; }
+
+  /* CTA */
+  .cta-section h2 { font-size: 1.6rem; }
+  .cta-btns { flex-direction: column; align-items: center; }
+
+  /* Footer */
+  .footer-links { gap: 16px; }
+}
+
+/* ---------- 480px ---------- */
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+
+  /* Header */
+  header { padding: 0 12px; gap: 8px; height: 56px; }
+  .logo-mark { width: 30px; height: 30px; font-size: 1rem; border-radius: 8px; }
+  .logo-name { font-size: 0.82rem; }
+  .logo-role { font-size: 0.5rem; letter-spacing: 1px; }
+  .header-cta { display: none; }
+
+  /* Hero */
+  .hero { padding: 72px 16px 40px; min-height: auto; }
+  .hero-text h1 { font-size: 1.55rem; margin-bottom: 14px; }
+  .hero-text p { font-size: 0.88rem; margin-bottom: 24px; }
+  .hero-btns { flex-direction: column; align-items: center; gap: 10px; margin-bottom: 28px; }
+  .btn-primary { width: 100%; text-align: center; justify-content: center; padding: 12px 20px; font-size: 0.78rem; }
+  .btn-ghost { width: 100%; text-align: center; justify-content: center; padding: 12px 20px; font-size: 0.78rem; }
+  .hero-badge { font-size: 0.65rem; padding: 6px 14px; }
+
+  /* Hero stats */
+  .hero-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 12px 8px;
+    gap: 4px;
+    border-radius: 12px;
+  }
+  .hstat { padding: 0 8px; }
+  .hstat strong { font-size: 1.4rem; }
+  .hstat span { font-size: 0.58rem; }
+  .hstat-divider { height: 28px; }
+
+  /* Sections */
+  .materiais, .beneficios, .sobre, .contato, .cta-section { padding: 48px 0; }
+  .section-title { font-size: 1.4rem; }
+  .section-sub { font-size: 0.85rem; }
+  .mat-category { margin-bottom: 36px; }
+  .cat-label { font-size: 0.75rem; padding: 8px 16px; }
+
+  /* CTA */
+  .cta-section h2 { font-size: 1.35rem; }
+  .cta-section p { font-size: 0.88rem; margin-bottom: 28px; }
+  .btn-primary.large { padding: 14px 24px; font-size: 0.8rem; width: 100%; justify-content: center; }
+  .btn-whatsapp { padding: 14px 24px; font-size: 0.78rem; width: 100%; justify-content: center; }
+
+  /* Contato */
+  .contato-card { padding: 14px 16px; gap: 12px; }
+  .contato-card-icon { width: 40px; height: 40px; border-radius: 12px; }
+
+  /* Footer */
+  footer { padding: 36px 0 24px; }
+  .footer-links { gap: 12px; }
+  .footer-links a { font-size: 0.72rem; }
+  .footer-copy { font-size: 0.65rem; }
+
+  /* WhatsApp float */
+  .wa-float { width: 48px; height: 48px; bottom: 20px; right: 16px; }
+  .wa-float svg { width: 22px; height: 22px; }
+}
+
+/* ---------- 360px ---------- */
+@media (max-width: 360px) {
+  .container { padding: 0 12px; }
+  header { padding: 0 10px; }
+  .logo-name { font-size: 0.76rem; }
+  .hero { padding: 66px 12px 32px; }
+  .hero-text h1 { font-size: 1.35rem; }
+  .hero-text p { font-size: 0.82rem; }
+  .hero-stats { padding: 10px 4px; }
+  .hstat { padding: 0 6px; }
+  .hstat strong { font-size: 1.2rem; }
+  .hstat span { font-size: 0.52rem; }
+  .section-title { font-size: 1.25rem; }
+  .mat-info h4 { font-size: 1rem; }
+  .mat-info p { font-size: 0.78rem; }
+  .mat-info { padding: 14px; }
+  .ben-card { padding: 16px; }
+  .ben-card p { font-size: 0.78rem; }
+  .cta-section h2 { font-size: 1.2rem; }
 }
